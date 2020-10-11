@@ -1,4 +1,4 @@
-# Face Verification using MTCNN
+# Face detection using MTCNN, Face verification and identification using VGGFace2
 
 This repository is for detecting masked faces drawn with OpenCV, synthetic facemask using MTCNN and perform face verification and identification using VGGface2 in Keras.
 
