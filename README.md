@@ -1,5 +1,5 @@
 # Face Verification using MTCNN
 
-This repository is for verifying faces drawn with OpenCV, synthetic facemask using MTCNN.
+This repository is for detecting masked faces drawn with OpenCV, synthetic facemask using MTCNN and perform face verification and identification using VGGface2 in Keras.
 
-It is a follow up step from https://github.com/xictus77/Facial-mask-overlay-with-OpenCV-Dlib.git
+It is a continuation from https://github.com/xictus77/Facial-mask-overlay-with-OpenCV-Dlib.git
