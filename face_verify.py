@@ -1,7 +1,9 @@
 import os
+import numpy as np
 import glob
 
 from Face_fn import *
+from scipy.spatial.distance import cosine
 
 os.chdir('C:/Users/Chow Mein/PycharmProjects/')
 
@@ -10,7 +12,7 @@ SET_PATH = 'C:/Users/Chow Mein/PycharmProjects/MTCNN/'
 known_path = SET_PATH + 'database/'
 test_path = SET_PATH + 'image/'
 # input test image filename here...
-test_image_path = test_path + 'Obama_and_Biden_unknown1.jpg'
+test_image_path = test_path + 'imagetest20.jpg'
 
 # Detection of faces and drawing of bounding boxes and extracting the faces using MTCNN
 print('Detection of faces and drawing of bounding boxes and extracting the faces using MTCNN')
@@ -19,11 +21,11 @@ print_faces(test_image_path)
 draw_faces(test_image_path, faces)
 
 
-# Perform Face Verification With VGGFace2
+print('----------------------------------------')
+# The following codes will perform Face Verification With VGGFace2
 
-print('Face Verification With VGGFace2')
 # Set threshold for cosine score in compare_face function
-thres_cosine = 0.4
+thres_cosine = 0.6
 
 # verify similarity by comparison and using cosine distance
 
@@ -49,6 +51,8 @@ def compare_face(model_scores_img1, model_scores_img2):
                 # plt.show()
 
 
+print('Face Verification With VGGFace2')
+# Performing verification with known database
 
 img1_faces = extract_face_from_image(test_image_path)
 model_scores_img1 = get_model_scores(img1_faces)
