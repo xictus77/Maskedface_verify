@@ -46,7 +46,6 @@ def extract_face_from_image(image_path, required_size=(224, 224)):
 
     return face_images
 
-
 def highlight_faces(image_path, faces):
     # display image
     image = plt.imread(image_path)
@@ -97,7 +96,7 @@ def get_model_scores(faces):
     # prepare the data for the model
     samples = preprocess_input(samples, version=2)
 
-    # create a vggface model object (3 models to choose from resnet50, senet50 and vgg16)
+    # create a vggface model object (2 models to choose from resnet50 and senet50)
     model = VGGFace(model='resnet50',
                     include_top=False,
                     input_shape=(224, 224, 3),
