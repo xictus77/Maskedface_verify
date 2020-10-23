@@ -10,7 +10,7 @@ SET_PATH = 'C:/Users/Chow Mein/PycharmProjects/MTCNN/'
 known_path = SET_PATH + 'database/'
 test_path = SET_PATH + 'image/'
 # input test image filename here...
-test_image_path = test_path + 'mattdamon_masked1.jpg'
+test_image_path = test_path + 'Oprah_Winfrey2_masked1.jpg'
 
 # Detection of faces and drawing of bounding boxes and extracting the faces
 print('Detection of faces and drawing of bounding boxes and extracting the faces using MTCNN')
