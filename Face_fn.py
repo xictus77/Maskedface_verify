@@ -101,6 +101,9 @@ def get_model_scores(faces):
                     include_top=False,
                     input_shape=(224, 224, 3),
                     pooling='avg')
+    # summarize input and output shape
+    # print('Inputs: %s' % model.inputs)
+    # print('Outputs: %s' % model.outputs)
 
     # perform prediction
     return model.predict(samples)
@@ -110,12 +113,12 @@ def model_pred(faces):
     samples = expand_dims(samples, axis=0)
 
     # prepare the data for the model
-    samples = preprocess_input(samples, version=2)
+    samples = preprocess_input(samples, version=2) # change the version to 1 if model used is vgg16
 
     # create a vggface model object
     model = VGGFace(model='senet50')
                     # options of two model='resnet50' and 'senet50'
-
+                    # if vgg16 is used, change the version to 1
     # summarize input and output shape
     print('Inputs: %s' % model.inputs)
     print('Outputs: %s' % model.outputs)
